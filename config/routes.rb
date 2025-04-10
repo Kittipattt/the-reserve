@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   # Other routes
   get "/login", to: "sessions#new", as: "login"   # Login form route
   post "/login", to: "sessions#create"             # Login logic route
@@ -8,9 +8,13 @@ Rails.application.routes.draw do
 
   # Dashboard route
   get "dashboard", to: "dashboard#index", as: "dashboard"
-  
+
   # Rooms routes
-  resources :rooms, only: [:index, :new, :create, :edit, :update, :show]
+  resources :rooms do
+    member do
+      get "reserve"  # This will create the room_reserve_path
+    end
+  end
 
   # Root route
   root "sessions#new"

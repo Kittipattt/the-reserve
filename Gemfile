@@ -12,9 +12,9 @@ gem "solid_cable"
 gem "bootsnap", require: false  # Reduce boot times
 gem "kamal", require: false  # Docker deployment
 gem "thruster", require: false  # Asset caching for Puma
-gem "tailwindcss-rails"  # Tailwind CSS gem
-gem 'bcrypt'
-gem 'devise'
+gem "tailwindcss-rails", "~> 3.0"
+gem "bcrypt"
+gem "devise"
 
 
 
