@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: one
+  available_from: 2025-04-10 17:54:51
+  available_to: 2025-04-10 17:54:51
+  status: MyString
+
+two:
+  room: two
+  available_from: 2025-04-10 17:54:51
+  available_to: 2025-04-10 17:54:51
+  status: MyString

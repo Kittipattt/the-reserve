@@ -1,0 +1,26 @@
+<!-- app/views/rooms/index.html.erb -->
+
+<h1>Rooms</h1>
+
+<%= link_to 'New Room', new_room_path %>  <!-- Link to create a new room -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Room Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.name %></td>
+        <td>
+          <%= link_to 'Edit', edit_room_path(room) %> |
+          <%= link_to 'Show', room_path(room) %> |
+          <%= link_to 'Delete', room_path(room), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

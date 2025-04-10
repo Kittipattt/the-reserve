@@ -20,18 +20,19 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: the_reserve_development
-  host: localhost       # Use localhost for Docker
-  port: 5433            # Use port 5433 mapped to 5432 in Docker container
-  username: postgres    # Default username for PostgreSQL in Docker
-  password: secret      # The password you set for the postgres user
+  pool: 5
+  username: postgres
+  password: secret
+  host: localhost
 
 test:
   <<: *default
   database: the_reserve_test
   host: localhost
-  port: 5433
+  port: 5432
   username: postgres
   password: secret
 

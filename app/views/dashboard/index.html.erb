@@ -1,0 +1,8 @@
+<!-- app/views/dashboard/index.html.erb -->
+
+<h1>Welcome to your Dashboard</h1>
+
+<p>Welcome, <%= current_user.email %>!</p>
+
+<%= link_to 'View Rooms', rooms_path %>
+<%= link_to 'Logout', logout_path, method: :delete %>

@@ -1,0 +1,8 @@
+<!-- app/views/rooms/show.html.erb -->
+
+<h1>Room Details</h1>
+
+<p><strong>Room Name:</strong> <%= @room.name %></p>
+
+<%= link_to 'Edit Room', edit_room_path(@room) %> |
+<%= link_to 'Back to Rooms', rooms_path %>

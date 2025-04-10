@@ -3,8 +3,8 @@ class CreateRooms < ActiveRecord::Migration[8.0]
     create_table :rooms do |t|
       t.string :name
       t.text :description
-      t.integer :capacity
-      t.decimal :price
+      t.string :roomQrCode
+      t.string :status
 
       t.timestamps
     end

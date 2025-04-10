@@ -13,6 +13,10 @@ gem "bootsnap", require: false  # Reduce boot times
 gem "kamal", require: false  # Docker deployment
 gem "thruster", require: false  # Asset caching for Puma
 gem "tailwindcss-rails"  # Tailwind CSS gem
+gem 'bcrypt'
+gem 'devise'
+
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"

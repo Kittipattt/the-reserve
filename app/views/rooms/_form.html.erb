@@ -1,0 +1,20 @@
+<%= form_with model: @room, local: true do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :capacity %><br>
+    <%= form.number_field :capacity %>
+  </div>
+
+  <div>
+    <%= form.label :equipment %><br>
+    <%= form.text_field :equipment %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
