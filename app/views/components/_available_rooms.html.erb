@@ -1,0 +1,19 @@
+<div style="max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem;">
+  <h2 style="font-size: 2.5rem; font-family: 'Georgia', serif; font-weight: bold; color: #333; margin-bottom: 2rem;">
+    Available Rooms
+  </h2>
+  <ul style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; 
+             @media (min-width: 768px) { grid-template-columns: 1fr 1fr; }">
+    <% [['Room A', 'Available'], ['Room B', 'Reserved'], ['Room C', 'Available'], ['Room D', 'Reserved']].each do |room, status| %>
+      <li style="background-color: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); border: 1px solid #E5E7EB; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 1.5rem; font-weight: medium; color: #333;">
+          <%= room %>
+        </span>
+        <span style="font-size: 1.25rem; font-weight: 600; 
+                    color: <%= status == 'Available' ? '#10B981' : '#EF4444' %>;">
+          <%= status %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+</div>

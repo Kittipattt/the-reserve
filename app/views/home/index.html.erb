@@ -1,0 +1,36 @@
+<div style="min-height: 100vh; background: linear-gradient(135deg, #f8f9fa, #f3f4f6); padding: 5rem 1.5rem; display: flex; justify-content: space-between; align-items: flex-start; font-family: 'Georgia', serif;">
+
+  <!-- Left Section for Welcome and Room Form -->
+  <div style="max-width: 900px; text-align: center; margin-bottom: 3rem; flex: 1; color: #333;">
+    <h1 style="font-size: 3.5rem; font-family: 'Georgia', serif; font-weight: bold; color: #0A2540; margin-bottom: 1rem; text-transform: uppercase;">
+      Welcome to <span style="color: #F59E0B;">The Reserve</span>
+    </h1>
+    <p style="font-size: 1.5rem; color: #6B7280; margin-bottom: 2rem; font-weight: 500;">
+      Reserve a private, luxurious meeting room for your next gathering
+    </p>
+
+    <div style="max-width: 600px; margin: 3rem auto 0; background: #fff; padding: 2.5rem; border-radius: 16px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+      <%= render 'components/room_form' %>
+    </div>
+  </div>
+
+  <!-- Right Section for Available Rooms -->
+  <div style="max-width: 600px; background: #fff; padding: 2.5rem; border-radius: 16px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); flex: 1; margin-left: 3rem;">
+    <h2 style="font-size: 2rem; font-weight: 700; color: #0A2540; margin-bottom: 1.5rem;">
+      Available Rooms
+    </h2>
+    <ul style="list-style: none; padding: 0;">
+      <% [['Room A', 'Available'], ['Room B', 'Reserved'], ['Room C', 'Available'], ['Room D', 'Reserved']].each do |room, status| %>
+        <li style="background: #fafafa; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);">
+          <span style="font-size: 1.25rem; font-weight: 600; color: #333;">
+            <%= room %>
+          </span>
+          <span style="font-size: 1.25rem; font-weight: 600; color: <%= status == 'Available' ? '#28a745' : '#dc3545' %>;">
+            <%= status %>
+          </span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
