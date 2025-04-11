@@ -7,20 +7,20 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
 
     if user&.valid_password?(params[:password])
-      # Sign the user in
+      # Sign the user in using Devise
       sign_in user
       flash[:notice] = "Logged in successfully"
 
-      # Set a header or add a flash class to trigger modal in the view
+      # Set a flash message to show the modal in the next request
       flash[:show_modal] = true
 
-      redirect_to dashboard_path
+      # Do not manually redirect here, Devise will handle the redirect
+      redirect_to after_sign_in_path_for(user)
     else
       flash.now[:alert] = "Invalid email or password"
       render :new
     end
   end
-
 
   def destroy
     sign_out current_user
