@@ -1,0 +1,53 @@
+/* Custom dashboard styling */
+
+/* Container styling for dashboard */
+.dashboard-container {
+    background: linear-gradient(to right, #2C3E50, #8E44AD); /* Gradient background */
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Dashboard heading */
+  .dashboard-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  /* Welcome message styling */
+  .welcome-message {
+    font-size: 1.25rem;
+    color: white;
+    opacity: 0.85;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .welcome-message .font-semibold {
+    font-weight: bold;
+  }
+  
+  /* Grid styling for rooms */
+  .room-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 640px) {
+    .room-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .room-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

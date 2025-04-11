@@ -1,50 +1,25 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [ :show, :edit, :update, :destroy ]
-  before_action :require_admin
+  before_action :set_room, only: [:show, :reserve]
 
   def index
-    @rooms = Room.all
+    @rooms = Room.all # Fetch all rooms from the database
   end
 
-  def new
-    @room = Room.new
+  def show
+    @room = Room.find(params[:id])
   end
 
-  def create
-    @room = Room.new(room_params)
-    if @room.save
-      redirect_to rooms_path, notice: "Room created successfully."
-    else
-      render :new
-    end
-  end
+  # Other actions like show, index, etc.
 
-  def edit; end
-
-  def update
-    if @room.update(room_params)
-      redirect_to rooms_path, notice: "Room updated successfully."
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @room.destroy
-    redirect_to rooms_path, notice: "Room deleted."
+  def reserve
+    # The room is already set via the before_action
+    # You can create a new reservation object here if necessary
+    @reservation = Reservation.new(room: @room)
   end
 
   private
 
   def set_room
     @room = Room.find(params[:id])
-  end
-
-  def room_params
-    params.require(:room).permit(:name, :description, :roomQrCode, :status)
-  end
-
-  def require_admin
-    redirect_to root_path, alert: "Access denied" unless current_user&.role == "admin"
   end
 end

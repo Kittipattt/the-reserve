@@ -6,52 +6,30 @@
   <title><%= content_for?(:title) ? yield(:title) : "The Reserve" %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-  <%= stylesheet_link_tag 'application.tailwind', media: 'all' %>
+  <%= stylesheet_link_tag 'custom', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900"  %>
-        <% if flash[:notice] %>
-          <div class="bg-green-500 text-white p-4 mb-4 rounded">
-            <%= flash[:notice] %>
-          </div>
-          <% flash[:notice] = nil %> <!-- Clears the flash message after rendering -->
-        <% end %>
+<body>
 
-  <div class="min-h-screen flex items-center justify-center">
-    <div class="w-full max-w-3xl">
-      <% if flash[:notice] %>
-        <div class="bg-green-500 text-white p-4 mb-4 rounded">
-          <%= flash[:notice] %>
-        </div>
-      <% end %>
+  <!-- Header -->
+  <header>
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="font-luxury tracking-wide">The Reserve</h1>
+    </div>
+  </header>
 
-      <% if controller_name != "sessions" && controller_name != "registrations" %>
-        <div class="bg-gradient-to-r from-[#2C3E50] to-[#8E44AD] p-4 rounded-lg shadow-xl mb-6">
-          <h1 class="text-2xl font-semibold text-white">Welcome to your App</h1>
-        </div>
-      <% end %>
-
+  <!-- Main Content -->
+  <main>
+    <div class="content-container">
       <%= yield %>
     </div>
-  </div>
+  </main>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (document.querySelector('[data-flash-message]')) {
-        openModal();
-        setTimeout(closeModal, 2000);  // Close the modal after 2 seconds (2000 milliseconds)
-      }
-    });
-
-    function openModal() {
-      document.getElementById('loginModal').classList.remove('hidden');
-    }
-
-    function closeModal() {
-      document.getElementById('loginModal').classList.add('hidden');
-    }
-  </script>
+  <!-- Footer -->
+  <footer>
+    &copy; <%= Time.now.year %> The Reserve. All rights reserved.
+  </footer>
 
 </body>
 </html>

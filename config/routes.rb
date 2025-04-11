@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "reservations/new"
+  get "reservations/create"
   devise_for :users
 
   # Other routes
@@ -12,9 +14,12 @@ Rails.application.routes.draw do
   # Rooms routes
   resources :rooms do
     member do
-      get "reserve"  # This will create the room_reserve_path
+      get 'reserve', to: 'reservations#new'  # Show the reservation form
+      post 'reserve', to: 'reservations#create'  # Submit the reservation form
     end
   end
+
+  resources :reservations, only: [:new, :create]
 
   # Root route
   root "sessions#new"

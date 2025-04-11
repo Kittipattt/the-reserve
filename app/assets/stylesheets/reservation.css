@@ -1,0 +1,75 @@
+/* reservation.css */
+
+/* General Container for the Reservation Form */
+.reservation-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #f5f7fa, #e8eff7); /* Light gradient for background */
+  }
+  
+  /* Title of the Page */
+  .reservation-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2C3E50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Styling for the Form Fields */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2C3E50;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    background-color: #f7f7f7;
+    color: #2C3E50;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #8E44AD;
+    outline: none;
+  }
+  
+  /* Button Styling */
+  .btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: #8E44AD;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-submit:hover {
+    background-color: #7D3C8B; /* Slightly darker shade for hover */
+  }
+  
+  .btn-submit:focus {
+    outline: none;
+  }
+  

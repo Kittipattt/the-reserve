@@ -1,11 +1,7 @@
-<div class="flex justify-center mb-6">
-  <!-- Card for each room with increased width and height -->
-  <div class="w-full max-w-[350px] h-[350px] bg-white rounded-lg shadow-xl overflow-hidden">
-    <div class="p-6 text-center text-black">
-      <h2 class="text-2xl font-semibold mb-4"><%= room.name %></h2>
-      <p class="text-lg mb-6 text-green-500">Available for reservation</p>
-      <%= link_to "Reserve Now", reserve_room_path(room), 
-                  class: 'block text-center text-2xl font-semibold text-white bg-gradient-to-r from-[#FFD700] to-[#FFC107] rounded-md py-4 px-8 hover:bg-gradient-to-r hover:from-[#FFC107] hover:to-[#FFD700] transform hover:scale-105 transition-all duration-300' %>
-    </div>
-  </div>
+<!-- _room.html.erb -->
+<div class="bg-white rounded-lg shadow-md p-6">
+  <h2 class="text-xl font-semibold mb-2"><%= room.name %></h2>
+  <p class="mb-4"><%= room.description %></p>
+
+  <%= link_to "Reserve", new_reservation_path(room_id: room.id), class: "bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700" %>
 </div>
