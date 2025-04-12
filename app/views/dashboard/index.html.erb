@@ -1,14 +1,7 @@
-  <%= stylesheet_link_tag 'dashboard', media: 'all' %>
+<%= stylesheet_link_tag 'dashboard', media: 'all' %>
 <div class="bg-gradient-to-r from-[#2C3E50] to-[#8E44AD] p-12 rounded-3xl shadow-2xl w-full">
-
-  <!-- Dashboard Title -->
-  <h1 class="text-5xl font-luxury text-center mb-8 text-white tracking-wide">Welcome to Your Dashboard</h1>
-
-  <!-- Welcome Text -->
-  <p class="text-xl text-center mb-10 text-white opacity-90">Welcome, <span class="font-semibold">Perch!</span></p>
-
   <!-- Room Cards Grid with 3 rooms per row -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="room-cards-container">
     <% if @rooms.present? %>
       <% @rooms.each do |room| %>
         <%= render 'room', room: room %>  <!-- Rendering the room partial -->
@@ -17,5 +10,5 @@
       <p class="text-center text-white opacity-75">No rooms available to reserve at the moment.</p>
     <% end %>
   </div>
-
 </div>
+

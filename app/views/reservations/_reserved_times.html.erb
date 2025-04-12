@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'reservation', media: 'all' %>
+<div class="reserved-times-box">
+  <h2 class="reserved-times-title">Reserved Times</h2>
+  <p class="reserved-times-date">
+    For <strong><%= @selected_date.strftime("%A, %B %d, %Y") %></strong>
+  </p>
+
+  <% if @reservations.any? %>
+    <ul class="reserved-times-list">
+      <% @reservations.each do |res| %>
+        <li class="reserved-times-item">
+          <%= res.start_time.strftime("%H:%M") %> - <%= res.end_time.strftime("%H:%M") %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p class="reserved-times-empty">No reservations for this day.</p>
+  <% end %>
+</div>

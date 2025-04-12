@@ -7,7 +7,7 @@
   
   /* Styling for the body */
   body {
-    background-color: #0b2e26;
+    background-color: #0f4121;
     color: white;
     min-height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@
   /* Header Styles */
   header {
     width: 100%;
-    background-color: #f1c40f; /* Yellow color */
+    background-color: #D4AF37; /* Yellow color */
     padding: 2rem 2rem;
     margin-bottom: 1.5rem;
   }
@@ -43,7 +43,9 @@
   }
   
   main .content-container {
-    max-width: 800px;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically (if you want that too) */
     width: 100%;
   }
   
@@ -54,12 +56,12 @@
     font-size: 0.875rem;
     color: #ccc;
     padding: 1.5rem 0;
-    border-top: 2px solid #f1c40f;
+    border-top: 2px solid #D4AF37;
   }
   
   /* Custom Button Styles */
   button {
-    background-color: #f1c40f;
+    background-color: #D4AF37;
     color: #0b2e26;
     padding: 12px 16px;
     font-weight: 600;
@@ -69,7 +71,7 @@
   }
   
   button:hover {
-    background-color: #f39c12; /* Darker yellow on hover */
+    background-color: #dbaa30; /* Darker yellow on hover */
   }
   
   a {

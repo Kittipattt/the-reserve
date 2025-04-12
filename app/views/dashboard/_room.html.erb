@@ -1,7 +1,8 @@
-<!-- _room.html.erb -->
-<div class="bg-white rounded-lg shadow-md p-6">
-  <h2 class="text-xl font-semibold mb-2"><%= room.name %></h2>
-  <p class="mb-4"><%= room.description %></p>
+<div class="room-card">
+  <div class="room-content">
+    <h2 class="room-title"><%= room.name %></h2>
+    <p class="room-description"><%= room.description %></p>
 
-  <%= link_to "Reserve", new_reservation_path(room_id: room.id), class: "bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700" %>
+    <%= link_to "Reserve", new_reservation_path(room_id: room.id), class: "reserve-button" %>
+  </div>
 </div>

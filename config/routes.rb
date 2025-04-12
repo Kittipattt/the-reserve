@@ -1,26 +1,27 @@
 Rails.application.routes.draw do
+  get "registrations/index"
   get "reservations/new"
   get "reservations/create"
   devise_for :users
 
-  # Other routes
-  get "/login", to: "sessions#new", as: "login"   # Login form route
-  post "/login", to: "sessions#create"             # Login logic route
-  delete "/logout", to: "sessions#destroy", as: "logout" # Logout route
+  get "register", to: "registrations#index", as: "register"
+  post "register", to: "registrations#create"  # handles form submission
 
-  # Dashboard route
+  # Other routes
+  get "/login", to: "sessions#index", as: "login"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy", as: "logout"
+
   get "dashboard", to: "dashboard#index", as: "dashboard"
 
-  # Rooms routes
   resources :rooms do
     member do
-      get 'reserve', to: 'reservations#new'  # Show the reservation form
-      post 'reserve', to: 'reservations#create'  # Submit the reservation form
+      get "reserve", to: "reservations#new"
+      post "reserve", to: "reservations#create"
     end
   end
 
-  resources :reservations, only: [:new, :create]
+  resources :reservations, only: [ :new, :create ]
 
-  # Root route
-  root "sessions#new"
+  root "sessions#index"
 end

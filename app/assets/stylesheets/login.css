@@ -1,86 +1,110 @@
-/* login.css */
 
-/* Container for the login box */
+/* Login Box Styling */
 .login-box {
-    width: 100%;
-    max-width: 600px;
-    background-color: #f1c40f; /* Gold background */
-    opacity: 0.95;  /* Adjust the opacity for a more subtle background */
-    padding: 2rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-top: 6rem; /* Adjusted space from the top */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Heading */
-  .login-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #0b2e26; /* Dark color for text */
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: 700;
-  }
-  
-  /* Form container for better alignment */
-  .login-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  /* Input fields */
-  input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid #f1c40f; /* Gold border */
-    background-color: transparent;
-    color: white;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  /* Input focus effect */
-  input[type="email"]:focus, input[type="password"]:focus {
-    border-color: #f39c12; /* Darker gold border on focus */
-    box-shadow: 0 0 5px rgba(243, 156, 18, 0.8); /* Slight glow effect */
-  }
-  
-  /* Button Styles */
-  button {
-    background-color: #f1c40f; /* Gold background for button */
-    color: #0b2e26;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  /* Button hover effect */
-  button:hover {
-    background-color: #f39c12; /* Darker gold on hover */
-  }
-  
-  /* Forgot Password link */
-  .forgot-password {
-    color: white;
-    text-align: center;
-    font-size: 0.875rem;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .forgot-password:hover {
-    color: #f39c12; /* Darker gold on hover */
-  }
-  
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;  /* Reasonable fixed max width */
+  margin: auto;
+  box-sizing: border-box;
+}
+
+
+/* Heading Styling */
+.login-heading {
+  font-size: 2rem;
+  color: #0b2e26;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  display: block;
+  color: #0b2e26;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-field {
+  width: 90%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #D4AF37;
+  background-color: white; /* White background for fields */
+  color: #0b2e26; /* Dark text color */
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  border-color: #f39c12; /* Darker gold border on focus */
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.8); /* Subtle glow effect */
+}
+
+/* Button Styling */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; /* Add gap between the buttons */
+}
+
+.submit-button, .register-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.submit-button {
+  background-color: #D4AF37;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #dbaa30;
+}
+
+.register-button {
+  background-color: #D4AF37;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #dbaa30;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #0b2e26;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #f39c12;
+}

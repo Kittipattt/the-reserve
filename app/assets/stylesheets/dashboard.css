@@ -1,53 +1,91 @@
-/* Custom dashboard styling */
+.room-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 4rem; /* Increased spacing between cards */
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  justify-items: start;
+  box-sizing: border-box;
+}
 
-/* Container styling for dashboard */
-.dashboard-container {
-    background: linear-gradient(to right, #2C3E50, #8E44AD); /* Gradient background */
-    padding: 3rem 2rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+/* For smaller screens, adjust the number of columns */
+@media (max-width: 1024px) {
+  .room-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; /* slightly more than before */
   }
-  
-  /* Dashboard heading */
-  .dashboard-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: white;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .room-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  
-  /* Welcome message styling */
-  .welcome-message {
-    font-size: 1.25rem;
-    color: white;
-    opacity: 0.85;
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-  
-  .welcome-message .font-semibold {
-    font-weight: bold;
-  }
-  
-  /* Grid styling for rooms */
-  .room-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-  }
-  
-  @media (min-width: 640px) {
-    .room-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .room-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
+}
+/* Card Container */
+.room-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+
+  /* Card size */
+  width: 100%; /* Make it fill its grid cell */
+  max-width: 100%; /* Ensures card does not exceed the grid's max-width */
+  min-height: 100px;
+  max-height: 200px;
+  padding: 1.5rem;
+  padding-bottom: 4rem; /* space for button */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center the content horizontally within the card */
+  text-align: center; /* Center text inside */
+}
+
+.room-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.room-content {
+  padding: 1rem;
+}
+
+/* Room Title */
+.room-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748; /* Dark gray */
+  margin-bottom: 1rem;
+}
+
+/* Room Description */
+.room-description {
+  color: #4a5568; /* Lighter gray */
+  margin-bottom: 1rem;
+}
+
+/* Reserve Button */
+.reserve-button {
+  background-color: #6b46c1; /* Purple */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+.reserve-button:hover {
+  background-color: #553c9a; /* Darker purple */
+}
