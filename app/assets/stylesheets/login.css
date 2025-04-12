@@ -11,6 +11,17 @@
   box-sizing: border-box;
 }
 
+.register-box{
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;  /* Reasonable fixed max width */
+  margin: auto;
+  box-sizing: border-box;
+  max-height : 100vh;
+}
 
 /* Heading Styling */
 .login-heading {
@@ -51,6 +62,17 @@
   transition: border-color 0.3s ease-in-out;
 }
 
+.input-role{
+  width: 90%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #D4AF37;
+  background-color: white; /* White background for fields */
+  color: #0b2e26; /* Dark text color */
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
 .input-field:focus {
   border-color: #f39c12; /* Darker gold border on focus */
   box-shadow: 0 0 5px rgba(243, 156, 18, 0.8); /* Subtle glow effect */

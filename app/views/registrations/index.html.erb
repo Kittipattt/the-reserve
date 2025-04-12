@@ -1,4 +1,58 @@
-<div>
-  <h1 class="font-bold text-4xl">Registrations#index</h1>
-  <p>Find me in app/views/registrations/index.html.erb</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'login', media: 'all' %> <!-- Use same CSS as login -->
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="register-box">
+    <h1 class="login-heading">Create Your Account</h1>
+
+    <%= form_with url: register_path, method: :post, scope: :user, local: true, html: { class: 'login-form' } do |form| %>
+      <div class="input-group">
+        <%= form.label :first_name, class: 'input-label' %>
+        <%= form.text_field :first_name, required: true, class: 'input-field' %>
+      </div>
+
+      <div class="input-group">
+        <%= form.label :last_name, class: 'input-label' %>
+        <%= form.text_field :last_name, required: true, class: 'input-field' %>
+      </div>
+
+      <div class="input-group">
+        <%= form.label :email, class: 'input-label' %>
+        <%= form.email_field :email, required: true, class: 'input-field' %>
+      </div>
+
+      <div class="input-group">
+        <%= form.label :password, class: 'input-label' %>
+        <%= form.password_field :password, required: true, class: 'input-field' %>
+      </div>
+
+      <div class="input-group">
+        <%= form.label :role, class: 'input-label' %>
+        <%= form.select :role, ['employee', 'admin'], prompt: 'Select a role', class: 'input-role' %>
+      </div>
+
+      <div class="button-container">
+        <%= form.submit 'Register', class: 'submit-button' %>
+        <%= link_to 'Back to Login', login_path, class: 'register-button' %>
+      </div>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <p style="color: green; text-align: center;"><%= flash[:notice] %></p>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <p style="color: red; text-align: center;"><%= flash[:alert] %></p>
+    <% end %>
+  </div>
+</body>
+</html>
