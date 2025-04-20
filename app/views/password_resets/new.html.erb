@@ -1,5 +1,48 @@
-<%= form_with url: password_resets_path, method: :post do |form| %>
-  <%= form.label :email, "Enter your email address" %>
-  <%= form.text_field :email %>
-  <%= form.submit "Send reset instructions" %>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Reset</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'login', media: 'all' %> <!-- Link to custom CSS -->
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-box">
+    <!-- Flash message for invalid password reset -->
+    <% if flash[:alert] %>
+      <div id="flash-alert" class="flash-alert">
+        <%= flash[:alert] %>
+      </div>
+
+      <script>
+        setTimeout(() => {
+          const alertBox = document.getElementById('flash-alert');
+          if (alertBox) {
+            alertBox.style.transition = 'opacity 0.5s ease';
+            alertBox.style.opacity = '0';
+            setTimeout(() => alertBox.remove(), 500);
+          }
+        }, 3000);
+      </script>
+    <% end %>
+
+    <h1 class="login-heading">Password Reset</h1>
+
+    <%= form_with url: password_resets_path, method: :post, class: 'login-form' do |form| %>
+      <div class="input-group">
+        <%= form.label :email, "Enter your email address", class: 'input-label' %>
+        <%= form.text_field :email, class: 'input-field' %>
+      </div>
+
+      <div class="button-container">
+        <%= form.submit "Send reset instructions", class: 'submit-button' %>
+      </div>
+    <% end %>
+
+  </div>
+</body>
+</html>

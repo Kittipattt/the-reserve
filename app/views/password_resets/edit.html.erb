@@ -1,19 +1,37 @@
-<h2>Reset your password</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'login', media: 'all' %> <!-- Link to your custom login.css -->
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-box">
+    <h1 class="login-heading">Reset Your Password</h1>
 
-<%= form_with model: @user, url: password_reset_path, method: :patch do |form| %>
-  <%= hidden_field_tag :token, params[:token] %>
+    <%= form_with model: @user, url: password_reset_path, method: :patch, class: 'login-form' do |form| %>
+      <%= hidden_field_tag :token, params[:token] %>
 
-  <div>
-    <%= form.label :password, "New password" %>
-    <%= form.password_field :password, required: true %>
+      <div class="input-group">
+        <%= form.label :password, "New password", class: 'input-label' %>
+        <%= form.password_field :password, required: true, class: 'input-field' %>
+      </div>
+
+      <div class="input-group">
+        <%= form.label :password_confirmation, "Confirm password", class: 'input-label' %>
+        <%= form.password_field :password_confirmation, required: true, class: 'input-field' %>
+      </div>
+
+      <div class="button-container">
+        <%= form.submit "Reset Password", class: 'submit-button' %>
+      </div>
+    <% end %>
+
   </div>
-
-  <div>
-    <%= form.label :password_confirmation, "Confirm password" %>
-    <%= form.password_field :password_confirmation, required: true %>
-  </div>
-
-  <div>
-    <%= form.submit "Reset Password" %>
-  </div>
-<% end %>
+</body>
+</html>
