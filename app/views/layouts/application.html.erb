@@ -13,10 +13,16 @@
 <body>
 
   <header>
-    <div class="max-w-6xl mx-auto text-center ">
-      <h1 class="font-luxury tracking-wide">The Reserve</h1>
+  <% if user_signed_in? %>
+    <div class="logout-container">
+      <%= button_to "Logout", logout_path, method: :delete, class: "logout-btn", data: { turbo: false } %>
     </div>
-  </header>
+  <% end %>
+
+  <div class="max-w-6xl mx-auto text-center">
+    <h1 class="font-luxury tracking-wide">The Reserve</h1>
+  </div>
+</header>
 
   <main>
     <div class="content-container">

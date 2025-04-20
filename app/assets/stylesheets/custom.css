@@ -13,16 +13,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 12px 6px;
+    padding: 0; 
+    margin: 0;  
   }
   
-  /* Header Styles */
   header {
     width: 100%;
-    background-color: #06202B; 
-    padding: 2rem 2rem;
-    margin-bottom: 1.5rem;
+    background-color: #06202B;
+    padding: 2rem; 
+    margin: 0;     
+    position: fixed; 
+    top: 0;         
+    left: 0;        
+    right: 0;       
+    z-index: 1000;  
   }
+  
   
   header h1 {
     font-size: 5rem;
@@ -34,6 +40,7 @@
   
   /* Main Content Section */
   main {
+    margin-top: 8rem; 
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -116,6 +123,29 @@
 
 .welcome-message .font-semibold {
   font-weight: bold;
+}
+
+.logout-container {
+  position: absolute;  /* Position relative to the body */
+  top: 20px;           /* 20px from the top */
+  right: 100px;         /* 20px from the right */
+  z-index: 1000;       /* Ensure it stays above other content */
+  margin-top: 10px;
+}
+
+.logout-btn {
+  background-color: #7AE2CF; /* Light blue background */
+  color: white;              /* White text */
+  padding: 10px 20px;        /* Adjust padding as needed */
+  border: none;              /* Remove default border */
+  border-radius: 5px;        /* Rounded corners */
+  font-size: 16px;           /* Font size */
+  cursor: pointer;          /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.logout-btn:hover {
+  background-color: #e27a7a; /* Red background on hover */
 }
 
 /* Grid styling for rooms */

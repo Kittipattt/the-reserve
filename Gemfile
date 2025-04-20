@@ -15,6 +15,8 @@ gem "thruster", require: false  # Asset caching for Puma
 gem "tailwindcss-rails", "~> 3.0"
 gem "bcrypt"
 gem "devise"
+gem "webpacker"
+
 
 
 
