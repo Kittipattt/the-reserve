@@ -72,7 +72,7 @@
 
 /* Reserve Button */
 .reserve-button {
-  background-color: #6b46c1; /* Purple */
+  background-color: #06202B; /* Purple */
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -87,5 +87,36 @@
 }
 
 .reserve-button:hover {
-  background-color: #553c9a; /* Darker purple */
+  background-color: #7AE2CF; /* Darker purple */
+}
+.upcoming-reservation {
+  background-color: #fde68a; /* Yellow */
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+/* custom.css or application.css */
+.upcoming-reservations {
+  max-height: 550px;  /* Adjust the height as per your design */
+  overflow-y: auto;   /* Allows scrolling when content overflows */
+}
+
+.upcoming-reservations ul {
+  padding: 0;
+  margin: 0;
+}
+
+.upcoming-reservations li {
+  padding: 10px;
+  border: 1px solid #ccc;  /* Add a border for better visibility */
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.upcoming-reservations h2 {
+  margin-bottom: 15px;
 }

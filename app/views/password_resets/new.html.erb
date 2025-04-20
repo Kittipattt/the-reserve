@@ -1,0 +1,5 @@
+<%= form_with url: password_resets_path, method: :post do |form| %>
+  <%= form.label :email, "Enter your email address" %>
+  <%= form.text_field :email %>
+  <%= form.submit "Send reset instructions" %>
+<% end %>

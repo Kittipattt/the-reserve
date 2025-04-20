@@ -7,7 +7,7 @@
   
   /* Styling for the body */
   body {
-    background-color: #0f4121;
+    background-color: #F5EEDD;
     color: white;
     min-height: 100vh;
     display: flex;
@@ -19,16 +19,16 @@
   /* Header Styles */
   header {
     width: 100%;
-    background-color: #D4AF37; /* Yellow color */
+    background-color: #06202B; 
     padding: 2rem 2rem;
     margin-bottom: 1.5rem;
   }
   
   header h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-family: 'Playfair Display', serif;
-    color: #0b2e26;
-    letter-spacing: 0.05em;
+    color: #7AE2CF;
+    letter-spacing: 1rem;
     text-align: center;
   }
   
@@ -54,15 +54,15 @@
     width: 100%;
     text-align: center;
     font-size: 0.875rem;
-    color: #ccc;
+    color: #06202B;
     padding: 1.5rem 0;
-    border-top: 2px solid #D4AF37;
+    border-top: 2px solid #06202B;
   }
   
   /* Custom Button Styles */
   button {
-    background-color: #D4AF37;
-    color: #0b2e26;
+    background-color: #7AE2CF;
+    color: #7AE2CF;
     padding: 12px 16px;
     font-weight: 600;
     border-radius: 0.375rem;
@@ -71,7 +71,7 @@
   }
   
   button:hover {
-    background-color: #dbaa30; /* Darker yellow on hover */
+    background-color: #077A7D; 
   }
   
   a {
@@ -81,14 +81,14 @@
   }
   
   a:hover {
-    color: #f1c40f;
+    color:white;
   }
 
   /* Custom dashboard styling */
 
 /* Container styling for dashboard */
 .dashboard-container {
-  background: linear-gradient(to right, #2C3E50, #8E44AD); /* Gradient background */
+  background: linear-gradient(to right, #2C3E50, #8E44AD); 
   padding: 3rem 2rem;
   border-radius: 1.5rem;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
@@ -137,4 +137,3 @@
   }
 }
 
-  

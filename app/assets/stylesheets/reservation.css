@@ -4,11 +4,11 @@
 .reservation-container {
     max-width: 600px;
     margin: 2rem auto;
-    background-color: #ffffff;
+    background-color: white;
     padding: 2rem;
     border-radius: 1.5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #f5f7fa, #e8eff7); /* Light gradient for background */
+    background: white; /* Light gradient for background */
   }
   
   /* Title of the Page */
@@ -39,14 +39,14 @@
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 0.75rem;
-    background-color: #f7f7f7;
-    color: #2C3E50;
+    background-color: white;
+    color: #06202B;
     font-size: 1rem;
     transition: border-color 0.3s ease;
   }
   
   .form-input:focus {
-    border-color: #8E44AD;
+    border-color: #06202B;
     outline: none;
   }
   
@@ -54,7 +54,7 @@
   .btn-submit {
     width: 100%;
     padding: 1rem;
-    background-color: #8E44AD;
+    background-color: #06202B;
     color: white;
     border-radius: 1rem;
     font-weight: 600;
@@ -66,12 +66,29 @@
   }
   
   .btn-submit:hover {
-    background-color: #7D3C8B; /* Slightly darker shade for hover */
+    background-color: #7AE2CF; 
   }
   
   .btn-submit:focus {
     outline: none;
   }
+
+  .reserved-times-box{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #2C3E50;
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 10rem;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
   
   
   

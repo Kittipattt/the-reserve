@@ -5,6 +5,11 @@
   <div class="reservation-container" style="flex: 2;">
     <h1 class="reservation-title">Reserve <%= @room.name %></h1>
 
+    <!-- Flash Message -->
+    <% if flash[:alert] %>
+      <div class="alert alert-danger"><%= flash[:alert] %></div>
+    <% end %>
+
     <!-- Date Picker -->
     <%= form_with url: reserve_room_path(@room), method: :get, local: true do %>
       <%= hidden_field_tag :room_id, @room.id %>
@@ -18,14 +23,22 @@
     <%= form_with model: @reservation, url: reservations_path, local: true do |f| %>
       <%= f.hidden_field :room_id, value: @room.id %>
 
+      <!-- Start Time -->
       <div class="form-group">
         <%= f.label :start_time, "Start Time", class: "form-label" %>
         <%= f.select :start_time, options_for_select(@available_times.map { |time| [time.strftime("%H:%M"), time] }), {}, class: "form-input" %>
+        <% if @reservation.errors[:start_time].any? %>
+          <div class="error-message"><%= @reservation.errors[:start_time].first %></div>
+        <% end %>
       </div>
 
+      <!-- End Time -->
       <div class="form-group">
         <%= f.label :end_time, "End Time", class: "form-label" %>
         <%= f.select :end_time, options_for_select(@available_times.map { |time| [time.strftime("%H:%M"), time] }), {}, class: "form-input" %>
+        <% if @reservation.errors[:end_time].any? %>
+          <div class="error-message"><%= @reservation.errors[:end_time].first %></div>
+        <% end %>
       </div>
 
       <%= f.submit "Confirm Reservation", class: "btn-submit" %>

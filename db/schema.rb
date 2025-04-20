@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_12_090813) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_20_144343) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -30,6 +30,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_12_090813) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_logs_on_user_id"
+  end
+
+  create_table "password_resets", force: :cascade do |t|
+    t.string "email"
+    t.string "code"
+    t.datetime "expires_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reservation_histories", force: :cascade do |t|
@@ -92,6 +100,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_12_090813) do
     t.datetime "last_sign_in_at", precision: nil
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "reset_password_code"
+    t.string "reset_password_token"
   end
 
   add_foreign_key "logs", "users"

@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       redirect_to after_sign_in_path_for(user)
     else
       flash.now[:alert] = "Invalid email or password"
-      render :new
+      render :index
     end
   end
 

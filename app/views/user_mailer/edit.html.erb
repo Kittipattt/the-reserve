@@ -1,0 +1,16 @@
+<h1>Enter Reset Code</h1>
+
+<%= form_with url: verify_reset_code_path, method: :patch do |f| %>
+  <%= hidden_field_tag :email, params[:email] %>
+
+  <%= label_tag :code, "Reset Code" %>
+  <%= text_field_tag :code, nil, required: true %>
+
+  <%= label_tag :password %>
+  <%= password_field_tag :password, nil, required: true %>
+
+  <%= label_tag :password_confirmation %>
+  <%= password_field_tag :password_confirmation, nil, required: true %>
+
+  <%= submit_tag "Reset Password" %>
+<% end %>

@@ -1,8 +1,11 @@
 class DashboardController < ApplicationController
   before_action :authenticate_user!  # Ensures user is logged in
-
   def index
     @rooms = Room.all
+    # Ensure we're using `>=` for upcoming reservations and Time.zone.now
+    @upcoming_reservations = current_user.reservations.includes(:room)
+                                          .where("start_time >= ?", Time.zone.now)
+                                          .order(:start_time)
   end
 
   def reserve

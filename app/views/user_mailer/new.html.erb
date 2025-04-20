@@ -1,0 +1,7 @@
+<h1>Forgot Password</h1>
+
+<%= form_with url: forgot_password_path, method: :post do |f| %>
+  <%= label_tag :email %>
+  <%= email_field_tag :email, nil, required: true %>
+  <%= submit_tag "Send Reset Code" %>
+<% end %>

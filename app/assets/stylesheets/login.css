@@ -26,7 +26,7 @@
 /* Heading Styling */
 .login-heading {
   font-size: 2rem;
-  color: #0b2e26;
+  color: #06202B;
   text-align: center;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -45,7 +45,7 @@
 
 .input-label {
   display: block;
-  color: #0b2e26;
+  color: #06202B;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -54,9 +54,9 @@
   width: 90%;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 2px solid #D4AF37;
+  border: 2px solid #06202B;
   background-color: white; /* White background for fields */
-  color: #0b2e26; /* Dark text color */
+  color: #06202B; /* Dark text color */
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease-in-out;
@@ -66,16 +66,16 @@
   width: 90%;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 2px solid #D4AF37;
+  border: 2px solid #7AE2CF;
   background-color: white; /* White background for fields */
-  color: #0b2e26; /* Dark text color */
+  color: #06202B; /* Dark text color */
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease-in-out;
 }
 .input-field:focus {
-  border-color: #f39c12; /* Darker gold border on focus */
-  box-shadow: 0 0 5px rgba(243, 156, 18, 0.8); /* Subtle glow effect */
+  border-color: #7AE2CF; /* Darker gold border on focus */
+  box-shadow: 0 0 5px rgba(120, 254, 194, 0.8); /* Subtle glow effect */
 }
 
 /* Button Styling */
@@ -99,34 +99,46 @@
 }
 
 .submit-button {
-  background-color: #D4AF37;
+  background-color: #06202B;
   color: white;
 }
 
 .submit-button:hover {
-  background-color: #dbaa30;
+  background-color: #7AE2CF;
 }
 
 .register-button {
-  background-color: #D4AF37;
+  background-color: #06202B;
   color: white;
 }
 
 .register-button:hover {
-  background-color: #dbaa30;
+  background-color: #7AE2CF;
 }
+
+.flash-alert {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c2c7;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
 
 /* Forgot Password Link */
 .forgot-password {
   display: block;
   text-align: center;
   font-size: 0.875rem;
-  color: #0b2e26;
+  color: #06202B;
   text-decoration: none;
   margin-top: 1rem;
   transition: color 0.3s ease;
 }
 
 .forgot-password:hover {
-  color: #f39c12;
+  color: #693382;
 }

@@ -1,0 +1,22 @@
+<div class="bg-white p-8 rounded-3xl shadow-xl mb-10">
+  <h2 class="text-2xl font-bold text-black-custom mb-6">Your Upcoming Reservations</h2>
+
+  <% if reservations.any? %>
+    <ul class="space-y-4">
+      <% reservations.each do |reservation| %>
+        <li class="bg-gray-100 p-4 rounded-xl shadow-sm">
+          <p class="text-black-custom"><strong>Room:</strong> <%= reservation.room.name %></p>
+          <p class="text-black-custom"><strong>Start:</strong> <%= reservation.start_time.strftime("%A, %d %B %Y at %I:%M %p") %></p>
+          <p class="text-black-custom"><strong>End:</strong> <%= reservation.end_time.strftime("%A, %d %B %Y at %I:%M %p") %></p>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p class="text-black-custom">You don’t have any upcoming reservations.</p>
+  <% end %>
+</div>
+
+<style>/* custom.css or in your application.css */
+.text-black-custom {
+  color: black;
+}</style>

@@ -26,6 +26,7 @@ end
 
 group :development do
   gem "web-console"  # Debugging tool in development
+  gem "letter_opener"
 end
 
 group :test do
