@@ -20,7 +20,6 @@
         <p><strong>Description:</strong> <%= @room.description %></p>
       </div>
 
-      <!-- Reservation Form -->
       <%= form_with url: dashboard_path, method: :post, class: "space-y-6" do |form| %>
         <div class="mb-4">
           <%= form.label :check_in, "Check-in Date", class: "block text-white" %>

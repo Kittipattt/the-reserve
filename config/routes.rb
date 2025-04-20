@@ -9,9 +9,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   get "register", to: "registrations#index", as: "register"
-  post "register", to: "registrations#create"  # handles form submission
+  post "register", to: "registrations#create" 
 
-  # Other routes
   get "/login", to: "sessions#index", as: "login"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy", as: "logout"

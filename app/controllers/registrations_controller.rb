@@ -6,7 +6,6 @@ class RegistrationsController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    # Encrypt password (if using Devise helpers)
     @user.password = params[:user][:password]
     
     if @user.save
