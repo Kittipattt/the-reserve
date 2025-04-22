@@ -15,6 +15,7 @@ gem "thruster", require: false  # Asset caching for Puma
 gem "tailwindcss-rails", "~> 3.0"
 gem "bcrypt"
 gem "devise"
+gem "dotenv-rails", groups: [ :development, :test, :production ]  # Load environment variables from .env file
 
 
 
