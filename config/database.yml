@@ -15,10 +15,15 @@ test:
   port: 5432
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  host: <%= ENV['DATABASE_HOST'] %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  database: <%= ENV['DATABASE_NAME'] %>
-  pool: 5
+  primary:
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
+  cache:
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
+  queue:
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
+  cable:
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
