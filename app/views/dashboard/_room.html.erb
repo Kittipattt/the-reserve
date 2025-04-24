@@ -3,9 +3,16 @@
     <h2 class="room-title"><%= room.name %></h2>
     <p class="room-description"><%= room.description %></p>
 
+    <% if room.roomQrCode.present? %>
+      <div class="room-qrcode">
+        <img src="<%= room.roomQrCode %>" alt="Room QR Code" class="qrcode-img">
+      </div>
+    <% end %>
+
     <%= link_to "Reserve", new_reservation_path(room_id: room.id), class: "reserve-button" %>
   </div>
 </div>
+
 
 <style>
 .upcoming-reservations {
@@ -36,4 +43,16 @@
   margin-bottom: 1rem;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+.room-qrcode {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.qrcode-img {
+  max-width: 120px;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 </style>
