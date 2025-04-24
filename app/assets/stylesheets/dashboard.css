@@ -26,12 +26,6 @@
   }
 }
 
-.rooms-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-}
 
 /* Card Container */
 .room-card {
@@ -151,11 +145,32 @@
 }
 
 .blueprint-img{
-  height: 800px;
+  height: 600px;
   width: 1000px;
 }
 
-.rooms{
+.rooms-text{
   color: #06202B;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.upcoming-wrapper {
+  width: 30%; /* or adjust to your liking */
+}
+
+.rooms-container {
+  width: 70%;
+}
+
+.rooms {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
