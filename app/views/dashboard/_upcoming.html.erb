@@ -6,8 +6,8 @@
       <% reservations.each do |reservation| %>
         <li class="bg-gray-100 p-4 rounded-xl shadow-sm">
           <p class="text-black-custom"><strong>Room:</strong> <%= reservation.room.name %></p>
-          <p class="text-black-custom"><strong>Start:</strong> <%= reservation.start_time.strftime("%A, %d %B %Y at %I:%M %p") %></p>
-          <p class="text-black-custom"><strong>End:</strong> <%= reservation.end_time.strftime("%A, %d %B %Y at %I:%M %p") %></p>
+          <p class="text-black-custom"><strong>Start:</strong> <%= reservation.start_time.in_time_zone('Bangkok').strftime("%A, %d %B %Y at %I:%M %p")%></p>
+          <p class="text-black-custom"><strong>End:</strong> <%= reservation.end_time.in_time_zone('Bangkok').strftime("%A, %d %B %Y at %I:%M %p") %></p>
         </li>
       <% end %>
     </ul>

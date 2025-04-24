@@ -9,7 +9,7 @@
     <ul class="reserved-times-list">
       <% @reservations.each do |res| %>
         <li class="reserved-times-item">
-          <%= res.start_time.strftime("%H:%M") %> - <%= res.end_time.strftime("%H:%M") %>
+          <%= res.start_time.in_time_zone('Bangkok').strftime("%H:%M") %> - <%= res.end_time.in_time_zone('Bangkok').strftime("%H:%M") %>
         </li>
       <% end %>
     </ul>
