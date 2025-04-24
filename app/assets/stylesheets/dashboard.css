@@ -24,6 +24,7 @@
     gap: 1.5rem;
   }
 }
+
 /* Card Container */
 .room-card {
   background-color: white;
@@ -36,8 +37,8 @@
   /* Card size */
   width: 100%; /* Make it fill its grid cell */
   max-width: 100%; /* Ensures card does not exceed the grid's max-width */
-  min-height: 100px;
-  max-height: 200px;
+  min-height: 300px; /* Increased minimum height for better image visibility */
+  max-height: 400px; /* Increased max height for a more spacious layout */
   padding: 1.5rem;
   padding-bottom: 4rem; /* space for button */
   display: flex;
@@ -47,6 +48,16 @@
   text-align: center; /* Center text inside */
 }
 
+/* Ensure the image takes up space and is responsive */
+.room-card img {
+  width: 100%; /* Make image fill the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0.5rem;
+  object-fit: cover; /* Ensure the image is cropped properly */
+  max-height: 180px; /* Limit image height to prevent overflowing */
+}
+
+/* Card hover effect */
 .room-card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -89,6 +100,8 @@
 .reserve-button:hover {
   background-color: #7AE2CF; /* Darker purple */
 }
+
+/* Upcoming Reservations Section */
 .upcoming-reservation {
   background-color: #fde68a; /* Yellow */
   color: black;
@@ -97,9 +110,9 @@
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  
 }
-/* custom.css or application.css */
+
+/* Upcoming Reservations Scroll */
 .upcoming-reservations {
   max-height: 550px;  /* Adjust the height as per your design */
   overflow-y: auto;   /* Allows scrolling when content overflows */
