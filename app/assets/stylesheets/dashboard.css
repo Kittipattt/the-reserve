@@ -134,3 +134,58 @@
 .upcoming-reservations h2 {
   margin-bottom: 15px;
 }
+
+/* Blueprint Image */
+.blueprint-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.blueprint-img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the sections below the blueprint */
+.content-below-blueprint {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+/* Left side - Upcoming */
+.upcoming-wrapper {
+  flex: 1;
+  max-width: 33.3333%;
+}
+
+/* Right side - Rooms */
+.room-wrapper {
+  flex: 2;
+  max-width: 66.6667%;
+}
+
+/* Background and padding for rooms */
+.room-bg {
+  background: linear-gradient(to right, #2C3E50, #8E44AD);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+  .content-below-blueprint {
+    flex-direction: column;
+  }
+
+  .upcoming-wrapper,
+  .room-wrapper {
+    max-width: 100%;
+  }
+}
