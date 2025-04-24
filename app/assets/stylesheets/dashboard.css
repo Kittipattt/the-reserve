@@ -135,11 +135,11 @@
   margin-bottom: 15px;
 }
 
-/* Blueprint Image */
+/* Blueprint centered at top */
 .blueprint-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  padding: 2rem;
 }
 
 .blueprint-img {
@@ -147,38 +147,39 @@
   max-width: 1000px;
   height: auto;
   border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
-/* Container for the sections below the blueprint */
+/* Flex layout for upcoming and room cards */
 .content-below-blueprint {
   display: flex;
-  flex-direction: row;
   gap: 2rem;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
 }
 
-/* Left side - Upcoming */
+/* Left column */
 .upcoming-wrapper {
   flex: 1;
-  max-width: 33.3333%;
+  min-width: 300px;
 }
 
-/* Right side - Rooms */
+/* Right column */
 .room-wrapper {
   flex: 2;
-  max-width: 66.6667%;
 }
 
-/* Background and padding for rooms */
+/* Gradient box for rooms */
 .room-bg {
-  background: linear-gradient(to right, #2C3E50, #8E44AD);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive behavior */
+/* Responsive: stack layout */
 @media (max-width: 1024px) {
   .content-below-blueprint {
     flex-direction: column;
@@ -186,6 +187,6 @@
 
   .upcoming-wrapper,
   .room-wrapper {
-    max-width: 100%;
+    width: 100%;
   }
 }
