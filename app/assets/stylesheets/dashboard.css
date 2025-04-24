@@ -140,53 +140,6 @@
   display: flex;
   justify-content: center;
   padding: 2rem;
+  margin-top: 100px;
 }
 
-.blueprint-img {
-  width: 100%;
-  max-width: 1000px;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-/* Flex layout for upcoming and room cards */
-.content-below-blueprint {
-  display: flex;
-  gap: 2rem;
-  padding: 0 2rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: flex-start;
-}
-
-/* Left column */
-.upcoming-wrapper {
-  flex: 1;
-  min-width: 300px;
-}
-
-/* Right column */
-.room-wrapper {
-  flex: 2;
-}
-
-/* Gradient box for rooms */
-.room-bg {
-  padding: 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive: stack layout */
-@media (max-width: 1024px) {
-  .content-below-blueprint {
-    flex-direction: column;
-  }
-
-  .upcoming-wrapper,
-  .room-wrapper {
-    width: 100%;
-  }
-}
