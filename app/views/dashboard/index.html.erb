@@ -1,18 +1,15 @@
 <%= stylesheet_link_tag 'dashboard', media: 'all' %>
-
 <!-- Blueprint at top center -->
 <div class="blueprint-wrapper">
   <img src="https://img5.pic.in.th/file/secure-sv1/rooms.md.png" alt="bluePrint" class="blueprint-img" />
 </div>
-
-<!-- Flex container for upcoming and rooms -->
-<div class="content-below-blueprint">
-  <div class="upcoming-wrapper">
-    <div class="upcoming-reservations" id="upcoming-reservations">
-      <%= render 'dashboard/upcoming', reservations: @upcoming_reservations %>
+  <!-- Upcoming reservations section -->
+    <div class="upcoming-wrapper">
+      <div class="upcoming-reservations" id="upcoming-reservations">
+        <%= render 'dashboard/upcoming', reservations: @upcoming_reservations %>
+      </div>
     </div>
-  </div>
-
+  <!-- Room cards section -->
   <div class="room-wrapper">
     <div class="room-bg">
       <div class="room-cards-container">
@@ -26,4 +23,3 @@
       </div>
     </div>
   </div>
-</div>
