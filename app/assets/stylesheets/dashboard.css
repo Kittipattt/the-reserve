@@ -1,12 +1,12 @@
 .room-cards-container {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 4rem; /* Increased spacing between cards */
   padding: 2rem;
   width: 100%;
   max-width: 1200px;
   margin-top: 10px;
-  justify-items: start;
   box-sizing: border-box;
   margin-top: 100px;
 }
