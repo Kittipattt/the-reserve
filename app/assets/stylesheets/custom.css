@@ -50,7 +50,6 @@
   }
   
   main .content-container {
-    display: flex;
     justify-content: center; /* centers horizontally */
     align-items: center;     /* centers vertically (if you want that too) */
     width: 100%;

@@ -137,6 +137,7 @@
 
 /* Blueprint centered at top */
 .blueprint-wrapper {
+  display: flex;
   justify-content: center;
   padding: 2rem;
   margin-top: 100px;
