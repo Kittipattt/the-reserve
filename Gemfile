@@ -8,7 +8,6 @@ gem "jbuilder"  # Build JSON APIs
 gem "tzinfo-data", platforms: %i[ windows jruby ]  # Time zone data
 gem "solid_cache"
 gem "solid_queue"
-gem "solid_cable"
 gem "bootsnap", require: false  # Reduce boot times
 gem "kamal", require: false  # Docker deployment
 gem "thruster", require: false  # Asset caching for Puma
