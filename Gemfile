@@ -8,11 +8,10 @@ gem "jbuilder"  # Build JSON APIs
 gem "tzinfo-data", platforms: %i[ windows jruby ]  # Time zone data
 gem "solid_cache"
 gem "solid_queue"
-gem "solid_cable"
 gem "bootsnap", require: false  # Reduce boot times
 gem "kamal", require: false  # Docker deployment
 gem "thruster", require: false  # Asset caching for Puma
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails", "~> 4.2"
 gem "bcrypt"
 gem "devise"
 gem "dotenv-rails", groups: [ :development, :test, :production ]  # Load environment variables from .env file
