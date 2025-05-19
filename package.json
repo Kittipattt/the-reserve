@@ -1,7 +1,7 @@
 {
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@playwright/test": "^1.52.0"
   }
 }
