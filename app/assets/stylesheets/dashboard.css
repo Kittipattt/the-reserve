@@ -3,10 +3,8 @@
   justify-content: center;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 4rem; /* Increased spacing between cards */
-  padding: 2rem;
   width: 100%;
   max-width: 1200px;
-  margin-top: 10px;
   box-sizing: border-box;
 }
 
@@ -140,7 +138,6 @@
 .blueprint-wrapper {
   display: flex;
   justify-content: center;
-  padding: 2rem;
   margin-top: 100px;
 }
 

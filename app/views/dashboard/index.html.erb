@@ -1,18 +1,19 @@
 <%= stylesheet_link_tag 'dashboard', media: 'all' %>
-<!-- Blueprint at top center -->
-<div class="blueprint-wrapper">
-  <img src="https://img5.pic.in.th/file/secure-sv1/rooms.md.png" alt="bluePrint" class="blueprint-img" />
-</div>
-
-
-<div class="flex-container">
-  <div class="upcoming-wrapper">
-    <div class="upcoming-reservations" id="upcoming-reservations">
-      <%= render 'dashboard/upcoming', reservations: @upcoming_reservations %>
+<div class="dashboard-wrapper">
+    <!-- Blueprint at top center -->
+    <div class="blueprint-wrapper">
+      <img src="https://img5.pic.in.th/file/secure-sv1/rooms.md.png" alt="bluePrint" class="blueprint-img" />
     </div>
-  </div>
 
-  <div class="rooms-container">
+
+  <div class="flex-container">
+    <div class="upcoming-wrapper">
+      <div class="upcoming-reservations" id="upcoming-reservations">
+        <%= render 'dashboard/upcoming', reservations: @upcoming_reservations %>
+      </div>
+    </div>
+
+    <div class="rooms-container">
     <div class="room-cards-container">
       <% if @rooms.present? %>
         <% @rooms.each do |room| %>

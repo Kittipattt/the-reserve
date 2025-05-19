@@ -40,13 +40,12 @@
   
   /* Main Content Section */
   main {
-    margin-top: 8rem; 
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 0 6rem;
+    padding: 10rem;
   }
   
   main .content-container {
